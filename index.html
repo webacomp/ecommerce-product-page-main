@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | E-commerce product page</title>
+
+		<link rel="stylesheet" href="files/main.css" />
+
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<!--Container-->
+		<div class="container">
+			<!--Layout-->
+			<div id="overlay"></div>
+			<!--Header-->
+			<header class="header">
+				<div class="product row">
+					<div class="product__content row header-column">
+						<div class="product__logo row">
+							<img
+								id="open"
+								data-state="closed"
+								src="images/icon-menu.svg"
+								alt=""
+								class="hamburger product__hamburger"
+							/>
+
+							<img class="product__img" src="images/logo.svg" alt="Logo" />
+						</div>
+						<!--Navigation-->
+						<div class="nav">
+							<nav class="primary__nav">
+								<ul class="list row">
+									<li class="item">
+										<a class="link" href="#"> Collections</a>
+									</li>
+									<li class="item"><a class="link" href="#">Men</a></li>
+									<li class="item"><a class="link" href="#"> Women</a></li>
+									<li class="item"><a class="link" href="#"> About</a></li>
+									<li class="item"><a class="link" href="#">Contact</a></li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="line"></div>
+						<!--Mobile navigation-->
+						<div id="mobile-nav" class="mobile__nav">
+							<nav>
+								<button id="close" class="close">
+									<img src="images/icon-close.svg" alt="" />
+								</button>
+								<ul class="list mobile__nav-list row">
+									<li class="item">
+										<a class="mobile__nav-link" href="#"> Collections</a>
+									</li>
+									<li class="item">
+										<a class="mobile__nav-link" href="#">Men</a>
+									</li>
+									<li class="item">
+										<a class="mobile__nav-link" href="#"> Women</a>
+									</li>
+									<li class="item">
+										<a class="mobile__nav-link" href="#"> About</a>
+									</li>
+									<li class="item">
+										<a class="mobile__nav-link" href="#">Contact</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="cart row header-column">
+							<button id="cart-btn" class="cart__btn btn">
+								<img class="cart__img" src="images/icon-cart.svg" alt="cart" />
+							</button>
+							<div class="avatar">
+								<img
+									class="avatar__img"
+									src="images/image-avatar.png"
+									alt="avatar"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!--Main section-->
+		<main class="main row column-1">
+			<!--Shopping cart-->
+			<div id="shopping-card" class="shopping__card">
+				<h1 class="shopping__card-title">Cart</h1>
+				<div class="shopping__card-line"></div>
+				<div class="shopping__card-content row">
+					<div class="shopping__card-img">
+						<img src="images/image-product-1-thumbnail.jpg" alt="" />
+					</div>
+
+					<div class="shopping__card-article">
+						<div class="row shopping__card-article-content">
+							<h2 class="shopping__card-title-2">
+								Fall limited edition sneakers
+							</h2>
+							<img src="images/icon-delete.svg" alt="" />
+						</div>
+						<div class="shopping__card-price">
+							<span>123</span>
+							<span>0</span>
+							<span>50%</span>
+						</div>
+					</div>
+				</div>
+
+				<button class="btn btn-checkout">Checkout</button>
+			</div>
+			<!--Hero-->
+			<section class="hero">
+				<div class="rounded">
+					<div class="hero__content">
+						<img
+							class="hero__img bordered"
+							src="images/image-product-1.jpg"
+							alt="Image product"
+						/>
+					</div>
+
+					<div class="hero__gallery row invisible">
+						<img
+							class="hero__gallery-img bordered marked"
+							src="images/image-product-1-thumbnail.jpg"
+							alt="thumbnail-1"
+						/>
+						<img
+							class="hero__gallery-img bordered"
+							src="images/image-product-2-thumbnail.jpg"
+							alt="thumbnail-2"
+						/>
+						<img
+							class="hero__gallery-img bordered"
+							src="images/image-product-3-thumbnail.jpg"
+							alt="thumbnail-3"
+						/>
+						<img
+							class="hero__gallery-img bordered"
+							src="images/image-product-4-thumbnail.jpg"
+							alt="thumbnail-4"
+						/>
+					</div>
+				</div>
+			</section>
+			<!--Sneakers-->
+			<section class="container sneakers">
+				<article class="sneakers__content">
+					<p class="sneakers__subtitle">Sneaker Company</p>
+					<h1 class="sneakers__title">Fall Limited Edition Sneakers</h1>
+					<p class="sneakers__text">
+						These low-profile sneakers are your perfect casual wear companion.
+						Featuring a durable rubber outer sole, they’ll withstand everything
+						the weather can offer.
+					</p>
+				</article>
+
+				<div class="row column-2">
+					<div class="sneakers__price row">
+						<div class="sneakers__value">
+							<span> $125.00</span>
+						</div>
+						<div class="sneakers__percentage">
+							<span>50%</span>
+						</div>
+					</div>
+					<div class="sneakers__total">
+						<span> $250.00</span>
+					</div>
+				</div>
+
+				<div class="sneakers__buttons row">
+					<div class="sneakers_add_remove-btns">
+						<button id="btn-minus" class="minus">
+							<img src="images/icon-minus.svg" alt="" />
+						</button>
+						<span id="number" class="number">0</span>
+						<button id="btn-plus" class="plus">
+							<img src="images/icon-plus.svg" alt="" />
+						</button>
+					</div>
+
+					<div class="sneakers__add">
+						<button class="btn btn-cart">Add to cart</button>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
